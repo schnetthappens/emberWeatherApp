@@ -4,4 +4,38 @@ $gutter: 0em;
 @import "bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "bower_components/neat/app/assets/stylesheets/neat";
 
-//add comment
+.weather-info-container {
+  @include outer-container(1080px);
+  height: 1500px;
+  /* background-color: #fff; */
+  /* border: 1px solid grey; */
+}
+
+  .weather-main,
+  .weather-forecast {
+    width: 90%;
+    margin: 2em auto;
+    background-color: #fff;
+  }
+
+  .weather-main {
+    height: 300px;
+    border: 1px solid grey;
+  }
+
+  .weather-forecast {
+    height: 1000px;
+  }
+
+    .weather-forecast-daily {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .daily-forecast {
+      height: 100px;
+      width: 90%;
+      margin: 2em auto;
+      background-color: #fff;
+      border: 1px solid grey;
+    }
