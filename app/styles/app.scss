@@ -27,11 +27,13 @@ body {
   }
 
   .weather-main {
+    @include span-columns(12);
     height: auto;
     border: 1px solid grey;
   }
 
     .weather-right-now {
+      @include span-columns(6 of 12);
       width: 100%;
       text-align: center;
     }
@@ -40,12 +42,14 @@ body {
     height: 1000px;
   }
 
+    .weather-forecast-hourly,
     .weather-forecast-daily {
       list-style: none;
       padding-left: 0;
     }
 
-    .daily-forecast {
+    .daily-forecast,
+    .hourly-forecast {
       height: 100px;
       width: 90%;
       margin: 2em auto;
