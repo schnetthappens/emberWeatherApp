@@ -1,10 +1,14 @@
+
+<h3 class="daily-forecast-heading">Next Seven Days</h3>
+
 <ul class="weather-forecast-daily">
 
   {{#each daily as |daily|}}
   <li class="daily-forecast">
+    <i class="wi wi-day-sunny-overcast daily-icon"></i>
+    <p class="daily-summary">{{daily.summary}}</p>
     <p class="high-temp">{{daily.temperatureMax}}</p>
     <p class="low-temp">{{daily.temperatureMin}}</p>
-    <p class="daily-summary">{{daily.summary}}</p>
   </li>
   {{/each}}
 
