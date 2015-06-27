@@ -1,17 +1,17 @@
 
-<h3 class="daily-forecast-heading">Next Seven Days</h3>
+  <h3 class="daily-forecast-heading">Next Seven Days</h3>
+  <i class="fa fa-plus fa-lg" {{action "toggleDailyWeather"}}></i>
+  <ul class="weather-forecast-daily">
 
-<ul class="weather-forecast-daily">
+    {{#each daily as |daily|}}
+    <li class="daily-forecast">
+      <i class="wi wi-day-sunny-overcast daily-icon"></i>
+      <p class="daily-summary">{{daily.summary}}</p>
+      <p class="high-temp">{{daily.temperatureMax}}</p>
+      <p class="low-temp">{{daily.temperatureMin}}</p>
+    </li>
+    {{/each}}
 
-  {{#each daily as |daily|}}
-  <li class="daily-forecast">
-    <i class="wi wi-day-sunny-overcast daily-icon"></i>
-    <p class="daily-summary">{{daily.summary}}</p>
-    <p class="high-temp">{{daily.temperatureMax}}</p>
-    <p class="low-temp">{{daily.temperatureMin}}</p>
-  </li>
-  {{/each}}
-
-</ul>
+  </ul>
 
 {{yield}}
