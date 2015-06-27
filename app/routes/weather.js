@@ -1,18 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(){
-    return Ember.RSVP.hash({
-
-      location: new Ember.RSVP.Promise(function(resolve, reject) {
-        navigator.geolocation.getCurrentPosition(function(position){
-          resolve({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude
-          });
-          // console.log(position.coords.latitude, position.coords.longitude);
-        });
-      })
+  model: function(params){
+    return Ember.$.ajax('https://api.forecast.io/forecast/01ad39e0ef141c8e3e01e954e0992d90/'+params.lat+','+params.lng,
+     {dataType: 'jsonp'}).then(function(response){
+       console.log(response);
     });
   },
 });
+
+// +params.lat+','+params.lng,
