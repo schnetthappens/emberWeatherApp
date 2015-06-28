@@ -6,6 +6,7 @@ export default Ember.Component.extend({
 
   init: function(){
     this.getNextTwelveHours();
+    // this.sliceHourlyTemp();
     this._super();
   },
 
@@ -14,6 +15,12 @@ export default Ember.Component.extend({
     this.set('hourly', nextTwelveHours);
     // console.log(this.hourly);
   },
+
+  // sliceHourlyTemp: function(){
+  //   var temp = this.get('hourly.temperature');
+  //   temp = temp.toString().slice(0,2);
+  //   this.set('hourly.temperature', temp);
+  // },
 
   actions: {
     toggleHourlyWeather: function(){
