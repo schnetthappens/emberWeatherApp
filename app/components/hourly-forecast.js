@@ -13,6 +13,13 @@ export default Ember.Component.extend({
     var nextTwelveHours = this.get('hourly').slice(0, 12);
     this.set('hourly', nextTwelveHours);
     // console.log(this.hourly);
+  },
+
+  actions: {
+    toggleHourlyWeather: function(){
+      $('.weather-forecast-hourly').slideToggle('slow', function(){});
+    }
   }
+
 
 });

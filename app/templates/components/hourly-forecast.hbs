@@ -1,15 +1,21 @@
 
+<ul class="hourly-forecast-heading-wrapper">
+    <h3 class="hourly-forecast-heading">Next 12 Hours</h3>
+    <i class="fa fa-plus fa-lg" {{action "toggleHourlyWeather"}}></i>
+</ul>
+
 
 <ul class="weather-forecast-hourly">
 
   {{#each this.hourly as |hourly|}}
   <li class="hourly-forecast">
-    <p class="hourly-high-temp">{{hourly.time}}</p>
-    <p class="hourly-high-temp">{{hourly.temperature}}</p>
-    <p class="hourly-low-temp">{{hourly.temperature}}</p>
+    <i class="wi wi-day-sunny-overcast daily-icon"></i>
+    <p class="hourly-time">{{hourly.time}}</p>
+    <p class="hourly-temp">{{hourly.temperature}}</p>
     <p class="hourly-precip-prob">{{hourly.precipProbability}}</p>
   </li>
   {{/each}}
+
 
 </ul>
 

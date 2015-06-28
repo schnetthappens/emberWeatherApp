@@ -22,7 +22,8 @@ body {
 }
 
   .weather-main,
-  .weather-forecast {
+  .weather-forecast,
+  .weather-hourly {
     width: 90%;
     margin: 2em auto;
     background-color: #fff;
@@ -48,40 +49,45 @@ body {
         margin-top: 0.5em;
       }
 
+
+
+
   .weather-forecast {
     height: auto;
   }
 
-  .daily-forecast-toggle {
-    height: 100px;
-    margin: 2em auto;
-    border: 1px solid grey;
+  .daily-forecast-heading-wrapper,
+  .hourly-forecast-heading-wrapper {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
   }
 
-    .daily-forecast-heading {
-      height: 60px;
-      margin: 1em auto;
+    .daily-forecast-heading,
+    .hourly-forecast-heading {
+      height: 30px;
       display: inline-block;
     }
 
     .fa-plus {
       display: inline-block;
-      margin-left: 1em;
+      margin-left: 2em;
     }
 
-    /* .daily-forecast-heading,
-    .fa-plus {
-      text-align: center;
-    } */
 
-    .weather-forecast-daily {
+    .weather-forecast-daily,
+    .weather-forecast-hourly {
       display: none;
     }
 
-    .weather-forecast-hourly,
-    .weather-forecast-daily {
+    .weather-forecast-daily,
+    .weather-forecast-hourly, {
       list-style: none;
       padding-left: 0;
+      /* border: 1px solid grey; */
+
     }
 
     .daily-forecast,
@@ -95,8 +101,12 @@ body {
       .high-temp,
       .low-temp,
       .daily-summary,
-      .daily-icon {
-        @include span-columns(3);
+      .daily-icon,
+      .hourly-time,
+      .hourly-temp,
+      .hourly-precip-prob
+       {
+        @include span-columns(3 of 12);
         @include omega;
         display: inline-block;
         text-align: center;

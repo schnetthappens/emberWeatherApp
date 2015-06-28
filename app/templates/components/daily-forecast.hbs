@@ -1,6 +1,9 @@
 
-  <h3 class="daily-forecast-heading">Next Seven Days</h3>
-  <i class="fa fa-plus fa-lg" {{action "toggleDailyWeather"}}></i>
+  <ul class="daily-forecast-heading-wrapper">
+    <h3 class="daily-forecast-heading">Next 7 Days</h3>
+    <i class="fa fa-plus fa-lg" {{action "toggleDailyWeather"}}></i>
+  </ul>
+
   <ul class="weather-forecast-daily">
 
     {{#each daily as |daily|}}
