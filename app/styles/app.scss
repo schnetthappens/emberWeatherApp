@@ -15,6 +15,7 @@ body {
 
 .weather-info-container {
   @include outer-container(1080px);
+  background-image: url("sunset.jpg");
   height: auto;
   margin-top: 10em;
   /* background-color: #fff; */
@@ -48,6 +49,14 @@ body {
         font-weight: 300;
         margin-top: 0.5em;
       }
+
+        .precip-prob {
+          font-size: 1.5em;
+        }
+
+        .current-time {
+          margin-bottom: 5em;
+        }
 
 
 
