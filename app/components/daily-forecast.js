@@ -10,7 +10,6 @@ export default Ember.Component.extend({
 
     actions: {
       toggleDailyWeather: function(){
-        console.log('hello');
         $('.weather-forecast-daily').slideToggle('slow', function(){});
       }
     }

@@ -8,7 +8,7 @@ export default Ember.Route.extend({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude
         });
-        console.log(position.coords.latitude, position.coords.longitude);
+        // console.log(position.coords.latitude, position.coords.longitude);
       });
     });
   },

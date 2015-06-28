@@ -1,9 +1,8 @@
 
-{{log hourly}}
 
-{{!-- <ul class="weather-forecast-hourly">
+<ul class="weather-forecast-hourly">
 
-  {{#each hourly as |hourly|}}
+  {{#each this.hourly as |hourly|}}
   <li class="hourly-forecast">
     <p class="hourly-high-temp">{{hourly.time}}</p>
     <p class="hourly-high-temp">{{hourly.temperature}}</p>
@@ -12,6 +11,6 @@
   </li>
   {{/each}}
 
-</ul> --}}
+</ul>
 
 {{yield}}
