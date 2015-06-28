@@ -71,15 +71,26 @@ body {
       display: inline-block;
     }
 
-    .fa-plus {
-      display: inline-block;
-      margin-left: 2em;
+    .next-seven-days,
+    .next-twelve-hours {
+      height: 60px;
+      width: 150px;
+      background-color: #fff;
+      font-size: 0.8em;
+      border: 2px solid black;
+      border-radius: 5px;
     }
+
+    .next-seven-days:hover {
+      border-color: blue;
+    }
+
 
 
     .weather-forecast-daily,
     .weather-forecast-hourly {
       display: none;
+      margin-top: 5em;
     }
 
     .weather-forecast-daily,
